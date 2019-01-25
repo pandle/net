@@ -6,7 +6,7 @@
 title: Leonids
 email:
 description: A simple and awesome blog theme powered by jekyll.
-url: # the base hostname & protocol for your site
+url: https://bilardi.github.io/leonids # the base hostname & protocol for your site
 favicon: # links of your favicon
   - favicon.ico
   - favicon.png
@@ -61,6 +61,10 @@ kramdown:
   entity_output: as_char
   toc_levels: 1..6
   enable_coderay: false
+
+plugins:
+  - jekyll-redirect-from
+#  - jekyll-feed
 
 #
 ###################################
