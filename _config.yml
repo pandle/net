@@ -15,7 +15,12 @@ keywords: ["blog", "jekyll"]
 meta:
   twitter-image: leonids-logo.png # or external link
   og-image: leonids-logo.png # or external link
+home:
+  hide-on-sidebar: false
+#  icon: fa-leaf
+#  icon: fa-home
 navigation:
+  hide-on-sidebar: false
   left:
 #    icon: fa-angle-left
     icon: fa-arrow-left
@@ -28,7 +33,7 @@ navigation:
 #    icon: fa-angle-right
     icon: fa-arrow-right
     color: success
-  
+
 #
 ###################################
 # Jekyll configuration
@@ -89,6 +94,10 @@ owner:
   codepen: #username
   reddit: #username
   telegram: #username
+  wikipedia: #username
+  custom:
+    - url: http://github.com/renyuanz/leonids/
+      icon: fa-code-fork
 
 webrick:
   headers:

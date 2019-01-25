@@ -15,15 +15,20 @@
   <span class="author_bio mbm">{{ author.bio }}</span>
   <nav class="nav">
     <ul class="nav-list">
+      {% if site.home.hide-on-sidebar == false %}
       <li class="nav-item">
-        <a href="{{ site.url }}/">home</a>
+        <a href="{{ site.url }}/">{% if site.home.icon %}<i class="fa {{ site.home.icon }}"></i>{% else %}home{% endif %}</a>
       </li>
+      {% endif %}
       {% for page in site.pages %} {% if page.title %}
-      <li class="nav-item">
-        <a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a>
+      {% if page.hide-on-sidebar == false %}
+       <li class="nav-item">
+        <a href="{{ site.url }}{{ page.url }}">{% if page.icon.sidebar %}<i class="fa {{ page.icon.sidebar }}"></i>{% else %}{{ page.title }}{% endif %}</a>
       </li>
+      {% endif %}
       {% endif %} {% endfor %}
     </ul>
   </nav>
   {% include social-links.html %}
+  {% include custom-links.html %}
 </div>
