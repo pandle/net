@@ -116,7 +116,7 @@ a.read-more {
 }
 
 .post-navigation {
-  background-color: #f6f6f6;
+  background-color: $navigation-background-color;
   @include box-shadow;
 }
 .leonids-icon {

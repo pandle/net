@@ -3,7 +3,11 @@
 <div class="cover-card table-cell table-middle">
   {% if author.avatar %}
   <a href="{{ site.url }}/">
+    {% if author.avatar contains 'https' or author.avatar contains 'http' %}
+    <img src="{{ author.avatar }}" alt="" class="avatar">
+    {% else %}
     <img src="{{ site.url }}/img/{{ author.avatar }}" alt="" class="avatar">
+    {% endif %}
   </a>
   {% endif %}
   <a href="{{ site.url }}/" class="author_name">{{ author.name }}</a>

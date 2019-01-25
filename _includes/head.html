@@ -26,7 +26,11 @@
   {% if page.image.feature %}
     <meta property="twitter:image" content="{{ site.url }}/img/{{ page.image.feature }}">
   {% else %}
-    <meta property="twitter:image" content="{{ site.url }}/img/leonids-logo.png">
+    {% if site.meta.twitter-image contains 'https' or site.meta.twitter-image contains 'http' %}
+    <meta property="twitter:image" content="{{ site.meta.twitter-image }}">
+    {% else %}
+    <meta property="twitter:image" content="{{ site.url }}/img/{{ site.meta.twitter-image }}">
+    {% endif %}
   {% endif %}
 
   <!-- Open Graph Tags -->
@@ -37,7 +41,11 @@
   {% if page.image.feature %}
     <meta property="og:image" content="{{ site.url }}/img/{{ page.image.feature }}">
   {% else %}
-    <meta property="og:image" content="{{ site.url }}/img/leonids-logo.png">
+    {% if site.meta.og-image contains 'https' or site.meta.og-image contains 'http' %}
+    <meta property="og:image" content="{{ site.meta.og-image }}">
+    {% else %}
+    <meta property="og:image" content="{{ site.url }}/img/{{ site.meta.og-image }}">
+    {% endif %}
   {% endif %}
   <title>{{ title }}</title>
 
@@ -49,8 +57,13 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | prepend: site.url }}" />
 
   <!-- Icons -->
-  <!-- 16x16 -->
-  <link rel="shortcut icon" href="{{ site.url }}/favicon.ico">
-  <!-- 32x32 -->
-  <link rel="shortcut icon" href="{{ site.url }}/favicon.png">
+  {% if site.favicon %}
+  {% for favicon in site.favicon %}
+  {% if favicon contains 'https' or favicon contains 'http' %}
+  <link rel="shortcut icon" href="{{ favicon }}">
+  {% else %}
+  <link rel="shortcut icon" href="{{ site.url }}/{{ favicon }}">
+  {% endif %}
+  {% endfor %}
+  {% endif %}
 </head>

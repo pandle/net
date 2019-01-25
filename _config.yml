@@ -7,8 +7,28 @@ title: Leonids
 email:
 description: A simple and awesome blog theme powered by jekyll.
 url: # the base hostname & protocol for your site
+favicon: # links of your favicon
+  - favicon.ico
+  - favicon.png
+#  - external link
 keywords: ["blog", "jekyll"]
-
+meta:
+  twitter-image: leonids-logo.png # or external link
+  og-image: leonids-logo.png # or external link
+navigation:
+  left:
+#    icon: fa-angle-left
+    icon: fa-arrow-left
+    color: danger
+  home:
+#    icon: fa-leaf
+    icon: fa-home
+    color: warning
+  right:
+#    icon: fa-angle-right
+    icon: fa-arrow-right
+    color: success
+  
 #
 ###################################
 # Jekyll configuration
@@ -34,7 +54,7 @@ kramdown:
 #
 owner:
   name: Leonids
-  avatar: leonids-logo.png
+  avatar: leonids-logo.png # or external link
   job: "A jekyll theme"
   bio: "A simple and awesome blog theme powered by jekyll."
   email:
@@ -69,3 +89,27 @@ owner:
   codepen: #username
   reddit: #username
   telegram: #username
+
+webrick:
+  headers:
+    Access-Control-Allow-Origin: "*"
+
+style:
+  text:
+    color: rgba(0, 0, 0, 0.87)
+  author:
+    color: "#F36170"
+  background:
+    color: "#f5f5f5"
+    image: #http://domain.name/path/background.jpg
+    size: cover
+  navigation-background:
+    color: "#f6f6f6"
+  color:
+    white: "#fff"
+    primary: "#42b983"
+    secondary: "#8d7edc"
+    success: "#65e892"
+    danger: "#f83e4b"
+    warning: "#F5A623"
+    info: "#09ABF6"
