@@ -34,6 +34,15 @@ navigation:
 #    icon: fa-angle-right
     icon: fa-arrow-right
     color: success
+section:
+  categories:
+    hide-on-post: false
+    hide-on-archive: true
+    hide-on-tags: true
+  tags:
+    hide-on-post: false
+    hide-on-archive: true
+    hide-on-categories: true
 
 #
 ###################################
