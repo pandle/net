@@ -21,6 +21,7 @@ home:
 #  icon: fa-home
 navigation:
   hide-on-sidebar: false
+  hide-on-post: false
   left:
 #    icon: fa-angle-left
     icon: fa-arrow-left

@@ -1,10 +1,10 @@
 ---
 layout: default
 ---
+{% if site.navigation.hide-on-post == false %}
+{% include nav.html %}
+{% endif %}
 
-<a class="btn" href= "{{ site.url }}/" >
-  Home
-</a>
 {% if page.image.feature %}
 <div class="post-image-feature">
   <img class="feature-image" src=
