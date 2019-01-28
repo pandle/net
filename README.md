@@ -1,3 +1,13 @@
+# Update 01/28/2019
+
+Waiting for version 2.0, there are new features about customization of
+* text / background colors and images from _config.yml
+* sidebar from _config.yml and each page with layout = page
+* post navigation from _config.yml
+* view of links of categories and tags into each layout from _config.html
+* view timeline list for catergory and tag page
+* 404 page
+
 # Update 07/09/2018
 
 I'm planning to refactor Leonids theme!!!
