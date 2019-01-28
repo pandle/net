@@ -9,7 +9,7 @@ layout: default
       <span class="post-date">
         {{ post.date | date: "%-d %b %Y" | upcase }}
       </span>
-      {% include cat_and_tag.html hide-cat=site.section.categories.hide-on-post hide-tag=site.section.tags.hide-on-post detail=post %}
+      {% include cat_and_tag.html hide-cat=site.collection.categories.hide-on-post btn-cat=site.collection.categories.btn-on-post hide-tag=site.collection.tags.hide-on-post btn-tag=site.collection.tags.btn-on-post detail=post %}
     </p>
     <h4>
       <a href="{{ site.url }}{{ post.url }}" class="post-title" title="{{ post.title | escape }}">{{ post.title }}</a>

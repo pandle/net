@@ -3,6 +3,11 @@ layout: default
 ---
 
   <div id="page">
+    {% if page.collection %}
+      {% assign collection-class = site.collection[page.collection].class %}
+      {% assign collection-list = site[page.collection] %}
+      {% include collections/cloud.html class=collection-class col=collection-list %}
+    {% endif %}
     <header class="page-header">
       <h2>{{ page.title }}</h2>
     </header>
