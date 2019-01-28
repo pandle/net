@@ -23,12 +23,18 @@ layout: default
   <div class="col l4 offset-l1">
     <div class="row">
       <div class="{{ collection-class }}-list">
-        {% for col in collection-list %}
-          {% capture element_name %}{{ col | first }}{% endcapture %}
-          {% if element_name == page_title %}
-            {% include {{ collection-template }} %}
-          {% endif %}
-        {% endfor %}
+            {% for col in collection-list %}
+              {% capture element_name %}{{ col | first }}{% endcapture %}
+              {% if element_name == page_title %}
+                {% if page.list == "timeline" %}
+                  {% capture col_name %}{{ col | first }}{% endcapture %}
+                  {% assign col_list=collection-list[col_name] %}
+                  {% include collections/timeline.html list=col_list %}
+                {% else %}
+                  {% include {{ collection-template }} %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
       </div>
     </div>
   </div>
