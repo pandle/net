@@ -52,6 +52,10 @@ collection:
     btn-on-archive: true
     hide-on-categories: true
     btn-on-categories: true
+resume:
+  hide-routines: false
+  hide-projects: false
+  hide-skills: false
 
 #
 ###################################
