@@ -6,8 +6,8 @@ layout: default
 {% endif %}
 
 {% if page.image.feature %}
-<div class="post-image-feature">
-  <img class="feature-image" src=
+<div class="post-media-feature">
+  <img class="feature-media" src=
   {% if page.image.feature contains 'https' or page.image.feature contains 'http' %}
   "{{ page.image.feature }}"
   {% else %}
@@ -16,11 +16,29 @@ layout: default
   alt="{{ page.title | escape }} feature image">
 
   {% if page.image.credit %}
-  <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
+  <span class="media-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
   {% endif %}
 </div><!-- /.image-wrap -->
 {% endif %}
 
+{% if page.video.feature %}
+<div class="post-media-feature">
+  <iframe class="feature-media" src=
+    {% if page.video.feature.youtubeid %}
+      "https://www.youtube.com/embed/{{ page.video.feature.youtubeid }}"
+    {% elsif page.video.feature.vimeoid %}
+      "https://player.vimeo.com/video/{{ page.video.feature.vimeo }}"
+    {% else %}
+      "{{ page.video.feature.custom }}" 
+    {% endif %}
+    frameborder="0" {{ page.video.feature.attributes }} allowfullscreen>
+  </iframe>
+
+  {% if page.video.credit %}
+  <span class="media-credit">Video Credit: <a href="{{ page.video.creditlink }}">{{ page.video.credit }}</a></span>
+  {% endif %}
+</div><!-- /.video-wrap -->
+{% endif %}
 
 <div id="post">
   <header class="post-header">
