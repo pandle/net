@@ -1,12 +1,23 @@
-# Update 01/28/2019
+# Update 01/31/2019
 
-Waiting for version 2.0, there are new features about customization of
+Waiting for version 2.0
+| Version | Description | Date |
+| --- | --- | --- |
+| 1.3 | New customizations for hidding sections or pages | 01/28/2019 |
+| 1.4 | New features: Daily routines, rating bar and video | 01/31/2019 |
+
+## Details of new customizations
 * text / background colors and images from _config.yml
 * sidebar from _config.yml and each page with layout = page
 * post navigation from _config.yml
 * view of links of categories and tags into each layout from _config.html
-* view timeline list for catergory and tag page
+* view timeline list for category and tag page
 * 404 page
+
+## Details of new features
+* daily routines on resume page
+* rating bar on timelines
+* video on post
 
 # Update 07/09/2018
 
