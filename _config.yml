@@ -20,6 +20,10 @@ home:
   hide-on-sidebar: false
 #  icon: fa-leaf
 #  icon: fa-home
+readme:
+  hide-on-sidebar: false
+  title: about
+  url: about.html
 navigation:
   hide-on-sidebar: false
   hide-on-post: false
@@ -77,6 +81,7 @@ kramdown:
 
 plugins:
   - jekyll-redirect-from
+#  - jekyll-readme-index
 #  - jekyll-feed
 
 #

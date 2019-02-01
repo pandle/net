@@ -20,6 +20,11 @@
         <a href="{{ site.url }}/">{% if site.home.icon %}<i class="fa {{ site.home.icon }}"></i>{% else %}home{% endif %}</a>
       </li>
       {% endif %}
+      {% if site.readme.hide-on-sidebar == false %}
+      <li class="nav-item">
+        <a href="{{ site.url }}/{{ site.readme.url }}">{% if site.readme.icon %}<i class="fa {{ site.readme.icon }}"></i>{% else %}{{ site.readme.title }}{% endif %}</a>
+      </li>
+      {% endif %}
       {% for page in site.pages %} {% if page.title %}
       {% if page.hide-on-sidebar == false %}
        <li class="nav-item">
