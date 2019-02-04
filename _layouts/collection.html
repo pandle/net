@@ -9,7 +9,9 @@ layout: default
   <div class="col l7">
     <div class="row">
       <div class="col">
+    {% if page.collection and page.hide-cloud == false %}
         {% include collections/cloud.html class=collection-class col=collection-list %}
+    {% endif %}
         <header class="page-header">
           <h2>{{ page.title }}</h2>
         </header>
