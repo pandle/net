@@ -3,7 +3,7 @@ layout: default
 ---
 
   <div id="page">
-    {% if page.collection %}
+    {% if page.collection and page.hide-cloud == false %}
       {% assign collection-class = site.collection[page.collection].class %}
       {% assign collection-list = site[page.collection] %}
       {% include collections/cloud.html class=collection-class col=collection-list %}
