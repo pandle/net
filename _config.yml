@@ -6,8 +6,8 @@
 title: Leonids
 email:
 description: A simple and awesome blog theme powered by jekyll.
-url: # the base hostname & protocol for your site
-repository-forked: http://github.com/renyuanz/leonids/ # in the footer
+url: https://bilardi.github.io/leonids # the base hostname & protocol for your site
+repository-forked: http://github.com/bilardi/leonids/ # in the footer
 favicon: # links of your favicon
   - favicon.ico
   - favicon.png
@@ -21,7 +21,7 @@ home:
 #  icon: fa-leaf
 #  icon: fa-home
 readme:
-  hide-on-sidebar: false
+  hide-on-sidebar: true
   title: about
   url: about.html
 navigation:
@@ -91,6 +91,9 @@ plugins:
 #
 owner:
   name: Leonids
+  author:
+    name: #your name
+    link: #your homepage
   avatar: leonids-logo.png # or external link
   job: "A jekyll theme"
   bio: "A simple and awesome blog theme powered by jekyll."
@@ -128,6 +131,8 @@ owner:
   telegram: #username
   wikipedia: #username
   custom:
+    - url: http://github.com/bilardi/leonids/
+      icon: fa-code
     - url: http://github.com/renyuanz/leonids/
       icon: fa-code-fork
 
