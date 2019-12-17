@@ -1,0 +1,18 @@
+{% assign list_content='' %}
+{% capture list_content %}
+    {% assign downcase_include_title=include.title | downcase %}
+    {% assign downcase_title='' %}
+    {% for post in site.posts %}{% if post.tags contains include.tag %}{% assign tag_permalink=post.permalink %}{% assign downcase_title=post.title | downcase %}{% endif %}{% endfor %}
+    {% for pg in site.pages %}{% if pg.type_list == include.type_list and pg.tags contains include.tag and pg.title != include.title %}
+    <article class="tag-item">
+      <a class="tag-item-title" href="{{ site.url }}{{ pg.permalink }}">{{ pg.title }}</a>
+    </article>
+    {% endif %}{% endfor %}
+{% endcapture %}
+
+{% if list_content contains 'article' %}
+  <div class="tag-group">
+    <h5 class="tag-group-title">{% if downcase_title != '' and downcase_title != downcase_include_title %}<a class="tag-group-title" href="{{ site.url }}{{ tag_permalink }}">{{ include.tag }}</a>{% else %}{% if downcase_title == '' %}{{ include.tag }}{% else %}{{ include.type_list | capitalize }}{% endif %}{% endif %}</h5>
+  {{ list_content }}
+  </div>
+{% endif %}

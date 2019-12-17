@@ -1,12 +1,19 @@
 ---
 layout: default
 ---
-{% if site.navigation.hide-on-post == false %}
-{% include nav.html %}
-{% endif %}
+
+
+<div id="post">
+  <header class="post-header">
+    <h1 title="{{ page.title | escape }}">{{ page.title }}</h1>
+  </header>
+<div class="row">
+  <div class="col l7">
+    <div class="row">
+  <article class="post-content">
 
 {% if page.image.feature %}
-<div class="post-media-feature">
+<div class="code-media-feature">
   <img class="feature-media" src=
   {% if page.image.feature contains 'https' or page.image.feature contains 'http' %}
   "{{ page.image.feature }}"
@@ -22,7 +29,7 @@ layout: default
 {% endif %}
 
 {% if page.video.feature %}
-<div class="post-media-feature">
+<div class="code-media-feature">
   <iframe class="feature-media" src=
     {% if page.video.feature.youtubeid %}
       "https://www.youtube.com/embed/{{ page.video.feature.youtubeid }}"
@@ -40,43 +47,27 @@ layout: default
 </div><!-- /.video-wrap -->
 {% endif %}
 
-<div id="post">
-  <header class="post-header">
-    <h1 title="{{ page.title | escape }}">{{ page.title }}</h1>
-    <span class="post-meta">
-      <span class="post-date">
-        {{ page.date | date: "%-d %b %Y" | upcase }}
-      </span>
-      •
-      {% include read_time.html %}
-      {% include cat_and_tag.html hide-cat=site.collection.categories.hide-on-post btn-cat=site.collection.categories.btn-on-post hide-tag=site.collection.tags.hide-on-post btn-tag=site.collection.tags.btn-on-post detail=page %}
-    </span>
-
-  </header>
-{% assign downcase_title=page.title | downcase%}
-{% if page.list or page.tags contains downcase_title %}
-<div class="row">
-  <div class="col l7">
-    <div class="row">
+{% if page.code.downloadlink and page.code.download %}
+  <span class="code-download">Download: <a href="{{ page.code.downloadlink }}">{{ page.code.download }}</a> {% if page.code.mirrorlink %}(<a href="{{ page.code.mirrorlink }}">{% if page.code.mirror %}{{ page.code.mirror }}{% else %}mirror{% endif %}</a>){% endif %}</span><br/>
 {% endif %}
-  <article class="post-content">
+{% if page.code.creditlink and page.code.credit %}
+  <span class="code-credit">Credit: <a href="{{ page.code.creditlink }}">{{ page.code.credit }}</a></span><br/>
+{% endif %}
+{% if page.code.guidelinelink and page.code.guideline %}
+  <span class="code-guideline">Guideline: <a href="{{ page.code.guidelinelink }}">{{ page.code.guideline }}</a></span>
+{% endif %}
+
     {{ content }}
   </article>
-{% if page.list or page.tags contains downcase_title %}
+{% if page.tags %}
     </div>
   </div>
   <div class="col l4 offset-l1">
     <div class="row">
-      {% if page.list %}
-      {% assign list=site.data.index[page.list.name] %}
-      {% include timeline.html data=list %}
-      {% endif %}
-      {% if page.tags contains downcase_title %}
       <div class="tag-list">
-      {% assign first_tag=page.tags | first %}
-      {% include type_list.html tag=first_tag title=page.title type_list=page.type_list %}
-      </div>
-      {% endif %}
+{% for tag in page.tags %}
+{% include type_list.html tag=tag title=page.title type_list=page.type_list %}
+{% endfor %}
     </div>
   </div>
 </div>

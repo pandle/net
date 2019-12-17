@@ -61,6 +61,8 @@ resume:
   hide-projects: false
   hide-skills: false
 
+include: ['_pages']
+
 #
 ###################################
 # Jekyll configuration
