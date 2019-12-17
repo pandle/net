@@ -24,7 +24,7 @@ layout: default
 
   <div class="col l4 offset-l1">
     <div class="row">
-      <div class="{{ collection-class }}-list">
+      <div class="{% if page.list == "timeline" %}archive{% else %}{{ collection-class }}-list{% endif %}">
             {% for col in collection-list %}
               {% capture element_name %}{{ col | first }}{% endcapture %}
               {% if element_name == page_title %}
