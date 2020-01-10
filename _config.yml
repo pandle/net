@@ -3,25 +3,23 @@
 # Site wide configuration
 ####################################
 #
-title: Leonids
+title: PandLE
 email:
-description: A simple and awesome blog theme powered by jekyll.
-url: https://bilardi.github.io/leonids # the base hostname & protocol for your site
+description: Playing AND LEarning
+url: https://pandle.github.io/net # the base hostname & protocol for your site
 repository-forked: http://github.com/bilardi/leonids/ # in the footer
 favicon: # links of your favicon
-  - favicon.ico
-  - favicon.png
-#  - external link
-keywords: ["blog", "jekyll"]
+  - https://s3-eu-west-1.amazonaws.com/cdn.bilardi.net/favicon.ico
+keywords: ["blog", "jekyll", "pandle", "playing", "learning"]
 meta:
-  twitter-image: leonids-logo.png # or external link
-  og-image: leonids-logo.png # or external link
+  twitter-image: https://s3-eu-west-1.amazonaws.com/cdn.bilardi.net/alessandra/index/glider.3d.png # or external link
+  og-image: https://s3-eu-west-1.amazonaws.com/cdn.bilardi.net/alessandra/index/glider.3d.png # or external link
 home:
-  hide-on-sidebar: false
+  hide-on-sidebar: true
 #  icon: fa-leaf
 #  icon: fa-home
 readme:
-  hide-on-sidebar: true
+  hide-on-sidebar: false
   title: about
   url: about.html
 navigation:
@@ -50,12 +48,13 @@ collection:
     btn-on-tags: true
   tags:
     class: tag
-    hide-on-post: false
+    hide-on-post: true
     btn-on-post: false
     hide-on-archive: true
     btn-on-archive: true
     hide-on-categories: true
     btn-on-categories: true
+  articles:
 resume:
   hide-routines: false
   hide-projects: false
@@ -68,11 +67,11 @@ include: ['_pages']
 # Jekyll configuration
 ####################################
 #
-timezone:          Europe/Paris
+timezone:          Europe/Rome
 markdown:          kramdown
 highlighter:       rouge
 excerpt_separator: <!--more-->
-permalink:         /articles/:year-:month/:title
+permalink:         /:category/:title
 
 kramdown:
   auto_ids: true
@@ -92,16 +91,16 @@ plugins:
 ####################################
 #
 owner:
-  name: Leonids
+  name: Pandle
   author:
-    name: #your name
-    link: #your homepage
-  avatar: leonids-logo.png # or external link
-  job: "A jekyll theme"
-  bio: "A simple and awesome blog theme powered by jekyll."
+    name: Pandle.org #your name
+    link: https://www.pandle.org/ #your homepage
+  avatar:
+  job:
+  bio: Playing AND LEarning
   email:
   disqus-shortname:
-  twitter: #username
+  twitter: pandlenet #username
   facebook: #username
   google:
     plus: #username
@@ -110,7 +109,7 @@ owner:
     ad-client:
     ad-slot:
   bing-verify:
-  github: #username
+  github: pandle #username
   gitlab: #username
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
   linkedin: #username
@@ -133,10 +132,10 @@ owner:
   telegram: #username
   wikipedia: #username
   custom:
-    - url: http://github.com/bilardi/leonids/
-      icon: fa-code
-    - url: http://github.com/renyuanz/leonids/
-      icon: fa-code-fork
+    - url: https://pandle.github.io/net/feed.xml
+      icon: fa-rss
+    - url: https://www.pandle.org/
+      icon: fa-share-alt
 
 webrick:
   headers:
@@ -146,9 +145,9 @@ style:
   text:
     color: rgba(0, 0, 0, 0.87)
   author:
-    color: "#F36170"
+    color: "#fff"
   background:
-    color: "#f5f5f5"
+    color: "#42b983"
     image: #http://domain.name/path/background.jpg
     size: cover
   navigation-background:
@@ -156,7 +155,7 @@ style:
   color:
     white: "#fff"
     primary: "#42b983"
-    secondary: "#8d7edc"
+    secondary: rgba(0, 0, 0, 0.87)
     success: "#65e892"
     danger: "#f83e4b"
     warning: "#F5A623"
