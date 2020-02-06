@@ -104,7 +104,7 @@ owner:
   facebook: #username
   google:
     plus: #username
-    analytics:
+    analytics: UA-157961465-1
     verify:
     ad-client:
     ad-slot:
