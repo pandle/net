@@ -6,7 +6,7 @@
 title: PandLE
 email:
 description: Playing AND LEarning
-url: "https://www.pandle.net/" # the base hostname & protocol for your site
+url: "https://www.pandle.net" # the base hostname & protocol for your site
 repository-forked: https://github.com/bilardi/leonids/ # in the footer
 favicon: # links of your favicon
   - https://s3-eu-west-1.amazonaws.com/cdn.bilardi.net/favicon.ico
