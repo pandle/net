@@ -10,10 +10,71 @@ url: "https://www.pandle.net" # the base hostname & protocol for your site
 repository-forked: https://github.com/bilardi/leonids/ # in the footer
 favicon: # links of your favicon
   - https://s3-eu-west-1.amazonaws.com/cdn.pandle.net/favicon.ico
+favicons:
+  - href: https://s3-eu-west-1.amazonaws.com/cdn.pandle.net/favicon.ico
+    rel: "icon"
+    sizes: "16x16 32x32 64x64"
+  - href: https://s3-eu-west-1.amazonaws.com/cdn.pandle.net/favicon-192.png
+    rel: "icon"
+    type: "image/png"
+    sizes: "192x192"
+  - href: https://s3-eu-west-1.amazonaws.com/cdn.pandle.net/favicon-160.png
+    rel: "icon"
+    type: "image/png"
+    sizes: "160x160"
+  - href: https://s3-eu-west-1.amazonaws.com/cdn.pandle.net/favicon-96.png
+    rel: "icon"
+    type: "image/png"
+    sizes: "96x96"
+  - href: https://s3-eu-west-1.amazonaws.com/cdn.pandle.net/favicon-64.png
+    rel: "icon"
+    type: "image/png"
+    sizes: "64x64"
+  - href: https://s3-eu-west-1.amazonaws.com/cdn.pandle.net/favicon-32.png
+    rel: "icon"
+    type: "image/png"
+    sizes: "32x32"
+  - href: https://s3-eu-west-1.amazonaws.com/cdn.pandle.net/favicon-16.png
+    rel: "icon"
+    type: "image/png"
+    sizes: "16x16"
+  - href: https://s3-eu-west-1.amazonaws.com/cdn.pandle.net/favicon-57.png
+    rel: "apple-touch-icon"
+  - href: https://s3-eu-west-1.amazonaws.com/cdn.pandle.net/favicon-114.png
+    rel: "apple-touch-icon"
+    sizes: "114x114"
+  - href: https://s3-eu-west-1.amazonaws.com/cdn.pandle.net/favicon-72.png
+    rel: "apple-touch-icon"
+    sizes: "72x72"
+  - href: https://s3-eu-west-1.amazonaws.com/cdn.pandle.net/favicon-144.png
+    rel: "apple-touch-icon"
+    sizes: "144x144"
+  - href: https://s3-eu-west-1.amazonaws.com/cdn.pandle.net/favicon-60.png
+    rel: "apple-touch-icon"
+    sizes: "60x60"
+  - href: https://s3-eu-west-1.amazonaws.com/cdn.pandle.net/favicon-120.png
+    rel: "apple-touch-icon"
+    sizes: "120x120"
+  - href: https://s3-eu-west-1.amazonaws.com/cdn.pandle.net/favicon-76.png
+    rel: "apple-touch-icon"
+    sizes: "76x76"
+  - href: https://s3-eu-west-1.amazonaws.com/cdn.pandle.net/favicon-152.png
+    rel: "apple-touch-icon"
+    sizes: "152x152"
+  - href: https://s3-eu-west-1.amazonaws.com/cdn.pandle.net/favicon-180.png
+    rel: "apple-touch-icon"
+    sizes: "180x180"
 keywords: ["blog", "jekyll", "pandle", "playing", "learning"]
 meta:
   twitter-image: https://s3-eu-west-1.amazonaws.com/cdn.bilardi.net/alessandra/index/glider.3d.png # or external link
   og-image: https://s3-eu-west-1.amazonaws.com/cdn.bilardi.net/alessandra/index/glider.3d.png # or external link
+metas:
+  - name: "msapplication-TileColor"
+    content: "#FFFFFF"
+  - name: "msapplication-TileImage"
+    content: "https://s3-eu-west-1.amazonaws.com/cdn.pandle.net/favicon-144.png"
+  - name: "msapplication-config"
+    content: "https://s3-eu-west-1.amazonaws.com/cdn.pandle.net/browserconfig.xml"
 home:
   hide-on-sidebar: true
 #  icon: fa-leaf
@@ -95,7 +156,7 @@ owner:
   author:
     name: Pandle.org #your name
     link: https://www.pandle.org/ #your homepage
-  avatar: 
+  avatar:
   logo: https://s3-eu-west-1.amazonaws.com/cdn.pandle.net/PandLE-logo.png
   job:
   bio: Playing AND LEarning
