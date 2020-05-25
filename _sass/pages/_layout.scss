@@ -31,6 +31,13 @@
       margin-right: 0;
     }
   }
+  .logo {
+    float: none;
+    @include media-query($medium-screen) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
   .author_name {
     display: block;
     color: $author-color;

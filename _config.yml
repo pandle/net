@@ -97,6 +97,7 @@ owner:
     name: #your name
     link: #your homepage
   avatar: leonids-logo.png # or external link
+  logo: #leonids-logo.png # or external link
   job: "A jekyll theme"
   bio: "A simple and awesome blog theme powered by jekyll."
   email:
