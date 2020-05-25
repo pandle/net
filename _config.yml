@@ -9,7 +9,7 @@ description: Playing AND LEarning
 url: "https://www.pandle.net" # the base hostname & protocol for your site
 repository-forked: https://github.com/bilardi/leonids/ # in the footer
 favicon: # links of your favicon
-  - https://s3-eu-west-1.amazonaws.com/cdn.bilardi.net/favicon.ico
+  - https://s3-eu-west-1.amazonaws.com/cdn.pandle.net/favicon.ico
 keywords: ["blog", "jekyll", "pandle", "playing", "learning"]
 meta:
   twitter-image: https://s3-eu-west-1.amazonaws.com/cdn.bilardi.net/alessandra/index/glider.3d.png # or external link
@@ -91,11 +91,12 @@ plugins:
 ####################################
 #
 owner:
-  name: Pandle
+  name:
   author:
     name: Pandle.org #your name
     link: https://www.pandle.org/ #your homepage
-  avatar:
+  avatar: 
+  logo: https://s3-eu-west-1.amazonaws.com/cdn.pandle.net/PandLE-logo.png
   job:
   bio: Playing AND LEarning
   email:

@@ -66,4 +66,14 @@
   {% endif %}
   {% endfor %}
   {% endif %}
+
+  {% if site.favicons %}
+  {% for favicon in site.favicons %}
+  {% assign href = favicon.href %}
+  {% if favicon contains 'https' or favicon contains 'http' %}
+  {% assign href = site.url/favicon.href %}
+  {% endif %}
+  <link rel="{{ favicon.rel }}" href="{{ href }}" {% if favicon.type %}type="{{ favicon.type }}"{% endif %} {% if favicon.size %}sizes="{{ favicon.sizes }}"{% endif %}>
+  {% endfor %}
+  {% endif %}
 </head>
