@@ -47,6 +47,13 @@
     <meta property="og:image" content="{{ site.url }}/img/{{ site.meta.og-image }}">
     {% endif %}
   {% endif %}
+
+  {% if site.metas %}
+  {% for meta in site.metas %}
+  <meta {% if meta.name %}name="{{ meta.name }}"{% endif %} {% if meta.property %}property="{{ meta.property }}"{% endif %} content="{{ meta.content }}">
+  {% endfor %}
+  {% endif %}
+
   <title>{{ title }}</title>
 
   <!-- CSS files -->

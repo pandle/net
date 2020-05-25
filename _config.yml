@@ -12,10 +12,25 @@ favicon: # links of your favicon
   - favicon.ico
   - favicon.png
 #  - external link
+favicons:
+  - href: favicon.ico
+    rel: "icon"
+    sizes: "16x16 32x32 64x64"
+  - href: favicon-192.png
+    rel: "icon"
+    type: "image/png"
+    sizes: "192x192"
 keywords: ["blog", "jekyll"]
 meta:
   twitter-image: leonids-logo.png # or external link
   og-image: leonids-logo.png # or external link
+metas:
+  - name: "msapplication-TileColor"
+    content: "#FFFFFF"
+  - name: "msapplication-TileImage"
+    content: "/leonids/favicon-144.png"
+  - name: "msapplication-config"
+    content: "/leonids/browserconfig.xml"
 home:
   hide-on-sidebar: false
 #  icon: fa-leaf
